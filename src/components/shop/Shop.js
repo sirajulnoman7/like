@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb, getStoreCart } from '../../utilities/fakedb';
+import { Link, useLoaderData } from 'react-router-dom';
+import { addToDb, deleteShoppingCart, getStoreCart } from '../../utilities/fakedb';
 import Cart from '../cart/Cart';
 import Product from '../product/Product';
 import './Shop.css';
 const Shop = () => {
-    const [products, setProducts] = useState([]);
-    useEffect(() => {
-        fetch('products.json')
-            .then(res => res.json())
-            // .then(data => console.log(data))
-            .then(data => setProducts(data))
-    }, []);
+    // const [products, setProducts] = useState([]);
+    const products = useLoaderData();
+
+    // useEffect(() => {
+    //     fetch('products.json')
+    //         .then(res => res.json())
+    //         // .then(data => console.log(data))
+    //         .then(data => setProducts(data))
+    // }, []);
     //last step
     //local storage a id diye products ar information ber kortechi
     //seta akta object silo tai seta re for in mere ber kore
@@ -33,6 +36,10 @@ const Shop = () => {
     }, [products]);
     //click handler useState
     const [cart, setCart] = useState([]);
+    const clearCart = () => {
+        setCart([]);
+        deleteShoppingCart();
+    }
     const handleAddToCart = (product) => {
         // quantity check and set 
         let newCart = [];
@@ -67,7 +74,9 @@ const Shop = () => {
             </div>
             <div className="cart-container">
 
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart} clearCart={clearCart}>
+                    <Link to='/order'>Cart Reviews</Link>
+                </Cart>
             </div>
         </div>
     );

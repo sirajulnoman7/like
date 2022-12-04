@@ -1,0 +1,99 @@
+.login {
+    text-align: center;
+
+    font-family: Lato;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: 0.0025em;
+
+
+}
+
+.form-container {
+    text-align: center;
+}
+
+.login-container {
+    width: 500px;
+    height: 600px;
+    border-radius: 8px;
+    margin: 100px auto;
+    border: 1px solid gray;
+
+}
+
+.sign-up-container {
+    width: 500px;
+    height: 700px;
+    border-radius: 8px;
+    margin: 100px auto;
+    border: 1px solid gray;
+
+}
+
+
+
+.form-label {
+    display: block;
+    font-family: Lato;
+    margin-left: 40px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+
+
+}
+
+.form-input {
+    margin-top: 8px;
+    height: 55px;
+    width: 415px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 1px solid #95A0A7;
+    padding-left: 5px;
+
+}
+
+.form-input-btn:hover {
+    background-color: #ff9900;
+    cursor: pointer;
+}
+
+.form-input-btn {
+    margin-top: 44px;
+    background-color: #FF99004D;
+    height: 55px;
+    width: 415px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 1px solid #95A0A7;
+    padding-left: 5px;
+
+}
+
+.form-password {
+    margin-top: 16px;
+}
+
+.continue-google:hover {
+    border: 2px solid blue;
+}
+
+.continue-google {
+    margin-top: 16px;
+    cursor: pointer;
+    height: 55px;
+    width: 415px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 1px solid #95A0A7;
+    padding-left: 5px;
+}
+
+.line {
+    width: 250px;
+}
